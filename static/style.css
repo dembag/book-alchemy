@@ -123,11 +123,20 @@ nav .container {
 }
 
 .book-cover-placeholder {
+    display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px; /* matches .book-cover so card heights stay consistent */
+    background: white;
+    color: gray;
+    font-style: italic;
+    border-radius: 4px;
 }
 
 .book-info {
     margin-top: auto;
+    border: black solid 1px;
 }
 
 /* ---------- Forms ---------- */
