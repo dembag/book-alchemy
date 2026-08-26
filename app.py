@@ -153,6 +153,7 @@ def add_book():
         year = int(year_str) if year_str else None
 
         cover_url = API_manager.fetch_cover_from_api(clean_isbn)
+        print(cover_url)
 
         new_book = Book(
             isbn=clean_isbn,
