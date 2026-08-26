@@ -201,6 +201,22 @@ def delete_book(book_id):
 
     return redirect(url_for("home", success=f"{deleted_title} successfully deleted."))
 
+@app.route("/author/<int:author_id>/delete", methods=["POST"])
+def delete_author(author_id):
+    """ Deletes the author and all of their books. """
+    author = Author.query.get_or_404(author_id)
+    author_name = author.name
+    book_count = len(author.books)
+
+    for book in list(author.books):
+        db.session.delete(book)
+
+    db.session.delete(author)
+    db.session.commit()
+
+    return redirect(url_for("home",
+                            success=f"{author_name} and {book_count} book(s) successfully deleted."))
+
 
 
 if __name__ == "__main__":
