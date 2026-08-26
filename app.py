@@ -149,10 +149,10 @@ def add_book():
         if errors:
             return render_template("add_book.html", error=" ".join(errors), authors=authors)
 
-        clean_isbn = isbn.replace("-","")
+        clean_isbn = isbn.replace("-","").replace(" ", "")
         year = int(year_str) if year_str else None
 
-        cover_url = API_manager.fetch_cover_from_api(isbn)
+        cover_url = API_manager.fetch_cover_from_api(clean_isbn)
 
         new_book = Book(
             isbn=clean_isbn,

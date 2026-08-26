@@ -40,7 +40,7 @@ def fetch_cover_from_api(isbn):
     if "items" not in book_data or not book_data["items"]:
         return None
 
-    volume_info = books_data["items"][0].get("volumeInfo", {})
+    volume_info = book_data["items"][0].get("volumeInfo", {})
     thumbnail = volume_info.get("imageLinks", {}).get("thumbnail")
 
     return thumbnail

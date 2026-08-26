@@ -23,10 +23,11 @@ nav {
 
 nav .container {
     display: flex;
-    max-width: 500px;
-    justify-content: center;
+    max-width: 1000px;
+    align-items: center;
     background-color: steelblue;
     padding-top: 1.5rem;
+    padding-left: 14rem;
     margin: 0;
 }
 
@@ -123,12 +124,6 @@ nav .container {
 .form-container .card {
     width: 100%;
     max-width: 350px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem
 }
 
 .form-input {
