@@ -17,17 +17,18 @@ body {
 /* ---------- Nav Bar ---------- */
 nav {
     background: steelblue;
+    display: flex;
+    justify-content: center;
     padding:1rem;
     height: 4rem;
 }
 
 nav .container {
     display: flex;
-    max-width: 1000px;
+    width: 1000px;
     align-items: center;
     background-color: steelblue;
     padding-top: 1.5rem;
-    padding-left: 14rem;
     margin: 0;
 }
 
