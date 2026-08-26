@@ -52,8 +52,10 @@
                 {% else %}
                     <div class="book-cover-placeholder">No Cover</div>
                 {% endif %}
-                <h3>{{ book.title }}</h3>
-                <strong>by </strong>{{ book.author.name }}
+                <div class="book-info">
+                    <h3>{{ book.title }}</h3>
+                    <strong>by </strong>{{ book.author.name }}
+                </div>
                 <form action="{{ url_for('delete_book', book_id=book.id) }}" method="post">
                     <button type="submit" class="btn-small-delete">Delete Book</button>
                 </form>

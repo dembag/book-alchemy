@@ -126,6 +126,10 @@ nav .container {
     align-items: center;
 }
 
+.book-info {
+    margin-top: auto;
+}
+
 /* ---------- Forms ---------- */
 .form-container {
     display: flex;
